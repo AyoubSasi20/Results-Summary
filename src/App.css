@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  /*Primary*/
+  --Light_red: hsl(0, 100%, 67%);
+  --Orangey_yellow: hsl(39, 100%, 56%);
+  --Green_teal: hsl(166, 100%, 37%);
+  --Cobalt_blue: hsl(234, 85%, 45%);
+  /* Gradients*/
+  --Light_slate_blue_background: hsl(252, 100%, 67%);
+  --Light_royal_blue_background: hsl(241, 81%, 54%);
+
+  --Violet_blue_circle: hsla(256, 72%, 46%, 1);
+  --Persian_blue_circle: hsla(241, 72%, 46%, 0);
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Pale_blue: hsl(221, 100%, 96%);
+  --Light_lavender: hsl(241, 100%, 89%);
+  --Dark_gray_blue: hsl(224, 30%, 27%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.result-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    var(--Light_royal_blue_background),
+    var(--Light_slate_blue_background)
+  );
+  padding-top: 50px;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 0px 60px 70px var(--Pale_blue);
+}
+.result {
+  color: var(--Light_lavender);
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.circle {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    var(--Violet_blue_circle),
+    var(--Persian_blue_circle)
+  );
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.circle h1 {
+  color: var(--White);
+  font-size: 55px;
+}
+.circle p {
+  color: var(--Light_lavender);
+  font-size: 18px;
+}
+.msg {
+  padding: 30px 45px 40px 45px;
+}
+.msg h4 {
+  font-size: 26px;
+  color: var(--White);
+  padding-bottom: 10px;
+}
+.msg p {
+  color: var(--Light_lavender);
+  font-size: 18px;
+}
+
+.summary-section {
+  padding: 20px;
+}
+
+.summary-item-reaction,
+.summary-item-memory,
+.summary-item-verbal,
+.summary-item-visual {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 18px;
+  margin: 15px;
+}
+.summary-item-reaction {
+  background-color: hsla(0, 100%, 67%, 0.08);
+}
+.summary-item-reaction h6 {
+  color: var(--Light_red);
+}
+.summary-item-memory {
+  background-color: hsla(39, 100%, 56%, 0.08);
+}
+.summary-item-memory h6 {
+  color: var(--Orangey_yellow);
+}
+.summary-item-verbal {
+  background-color: hsla(166, 100%, 37%, 0.08);
+}
+.summary-item-verbal h6 {
+  color: var(--Green_teal);
+}
+.summary-item-visual {
+  background-color: hsla(234, 85%, 45%, 0.08);
+}
+.summary-item-visual h6 {
+  color: var(--Cobalt_blue);
+}
+.summary-section h5 {
+  display: flex;
+  font-size: 22px;
+  color: var(--Dark_gray_blue);
+  padding: 15px 10px;
+  margin: 0 10px;
+}
+.item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding-left: 5px;
+  font-size: 26px;
+}
+.item-title img {
+  width: 24px;
+}
+.item-score {
+  padding-right: 5px;
+  color: var(--Light_lavender);
+  font-size: 18px;
+  font-weight: 800;
+}
+.item-score span {
+  color: var(--Dark_gray_blue);
+}
+.btn {
+  padding: 10px 20px;
+}
+.btn button {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--Dark_gray_blue);
+  color: var(--White);
+  border: none;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn button:hover {
+  background: linear-gradient(
+    to top,
+    var(--Light_royal_blue_background),
+    var(--Light_slate_blue_background)
+  );
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--Dark_gray_blue);
+}
+.attribution a {
+  color: var(--Cobalt_blue);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--Green_teal);
+}
+@media (min-width: 768px) {
+  body {
+    background-color: var(--Pale_blue);
+  }
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 25px;
+    box-shadow: 10px 20px 40px var() rgba(120, 87, 255, 0.1);
+    max-width: 700px;
+  }
+  .result-section,
+  .summary-section {
+    flex: 1;
+  }
+  .result-section {
+    border-radius: 25px;
+  }
+}
